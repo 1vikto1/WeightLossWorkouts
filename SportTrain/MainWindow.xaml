@@ -1,0 +1,28 @@
+﻿<Window x:Class="SportTrain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportTrain"
+        mc:Ignorable="d"
+        Icon="Image/SportTrainIco.ico"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Background="{StaticResource ClrFon2}"/>
+
+        <Frame Grid.Column="0" Name="FrameList" NavigationUIVisibility="Hidden" ContentRendered="FrameListRendered"/>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Content="Упражнения" Name="BtnExecisesList" Click="BtnExecisesList_Click"/>
+            <Button Content="Пользователи" Name="BtnHumanList" Click="BtnHumanList_Click"/>
+            <Button Content="Назад" Name="BtnBack" Click="BtnBack_Click"/>
+            <Button Content="Выход" Name="BtnExit" Click="BtnExit_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
